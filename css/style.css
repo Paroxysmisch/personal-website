@@ -1,0 +1,61 @@
+:root {
+	--main-bg-color: #0d0d0d;
+	--yellow-0: #fdf8e1;
+	--yellow-1: #fcefb4;
+	--yellow-2: #fae588;
+	--yellow-3: #f9dc5c;
+	--yellow-4: #1d1b14;
+}
+
+body {
+	background: linear-gradient(180deg, var(--yellow-4) 0%, var(--main-bg-color) 100%);
+	height: 100vh;
+	width: 100vw;
+}
+
+.center {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 100rch;
+	padding-left: 10rch;
+	padding-right: 10rch;
+}
+
+.navbar {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	font-size: 1.17rem;
+	color: var(--yellow-0);
+}
+
+.navbar a:hover {
+	text-decoration: underline;
+	font-weight: bold;
+}
+
+.selected-navbar {
+	color: var(--yellow-3);
+	text-decoration: underline;
+	font-weight: bold;
+}
+
+h2 {
+	color: var(--yellow-1);
+}
+h1 {
+	color: var(--yellow-0);
+	font-size: 2.5rem;
+}
+
+.hero {
+	height: 17vw;
+	width: 30vw;
+	border-radius: 30%/50%;
+	float: right;
+	position: relative;
+	top: -17vw;
+	z-index: -1;
+	filter: brightness(50%);
+}
