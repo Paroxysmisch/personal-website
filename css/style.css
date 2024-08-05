@@ -28,11 +28,34 @@ body {
 	justify-content: space-between;
 	font-size: 1.17rem;
 	color: var(--yellow-0);
+	padding-top: 1.5rem;
 }
 
-.navbar a:hover {
-	text-decoration: underline;
+.navbar a {
+	display: inline-block;
+	position: relative;
+}
+
+.navbar a:after {
+	content: '';
+	position: absolute;
+	width: 100%;
+	transform: scaleX(0);
+	height: 2px;
+	bottom: 2px;
+	left: 0;
+	background-color: var(--yellow-0);
+	transform-origin: bottom right;
+	transition: transform 0.15s ease-out;
+}
+
+.navbar a:not(.selected-navbar):hover {
 	font-weight: bold;
+}
+
+.navbar a:not(.selected-navbar):hover:after {
+	transform: scaleX(1);
+	transform-origin: bottom left;
 }
 
 .selected-navbar {
