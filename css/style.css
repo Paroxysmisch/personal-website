@@ -94,3 +94,20 @@ h1 {
 	margin-top: 0;
 	margin-bottom: 0;
 }
+
+section {
+	border-right-style: solid;
+	border-right-width: 4px;
+	border-radius: 1rem;
+	border-color: var(--yellow-1);
+}
+
+ul li {
+	display: inline;
+	color: var(--yellow-0);
+	font-size: 2rem;
+}
+
+ul {
+	padding: 0;
+}
