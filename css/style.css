@@ -9,7 +9,6 @@
 
 body {
 	background: linear-gradient(180deg, var(--yellow-4) 0%, var(--main-bg-color) 100%);
-	height: 100vh;
 	width: 100vw;
 }
 
@@ -28,12 +27,20 @@ body {
 	justify-content: space-between;
 	font-size: 1.17rem;
 	color: var(--yellow-0);
-	padding-top: 1.5rem;
+	position: sticky;
+	top: 1.5rem;
 }
 
 .navbar a {
 	display: inline-block;
 	position: relative;
+	background-color: rgba(255, 255, 255, 0);
+	-webkit-backdrop-filter: blur(5px);
+	backdrop-filter: blur(10px);
+	padding: 0.7rem;
+	border-style: solid;
+	border-radius: 1rem;
+	overflow: hidden;
 }
 
 .navbar a:after {
@@ -41,8 +48,8 @@ body {
 	position: absolute;
 	width: 100%;
 	transform: scaleX(0);
-	height: 2px;
-	bottom: 2px;
+	height: 4px;
+	bottom: 0px;
 	left: 0;
 	background-color: var(--yellow-0);
 	transform-origin: bottom right;
@@ -69,7 +76,7 @@ h2 {
 }
 h1 {
 	color: var(--yellow-0);
-	font-size: 2.5rem;
+	font-size: 2rem;
 }
 
 .hero {
@@ -81,4 +88,9 @@ h1 {
 	top: -17vw;
 	z-index: -1;
 	filter: brightness(50%);
+}
+
+.no-top-bottom-margin {
+	margin-top: 0;
+	margin-bottom: 0;
 }
