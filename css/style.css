@@ -80,12 +80,12 @@ h1 {
 }
 
 .hero {
-	height: 17vw;
-	width: 30vw;
+	height: 17vmax;
+	width: 30vmax;
 	border-radius: 30%/50%;
 	float: right;
 	position: relative;
-	top: -17vw;
+	top: -17vmax;
 	z-index: -1;
 	filter: brightness(50%);
 }
