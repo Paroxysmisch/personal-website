@@ -16,14 +16,13 @@ body {
 	margin-left: auto;
 	margin-right: auto;
 	max-width: 100rch;
-	padding-left: 10rch;
-	padding-right: 10rch;
+	padding-left: 4rem;
+	padding-right: 4rem;
 }
 
 .navbar {
 	display: flex;
 	flex-direction: row;
-	flex-wrap: nowrap;
 	justify-content: space-between;
 	font-size: 1.17rem;
 	color: var(--yellow-0);
@@ -110,4 +109,17 @@ ul li {
 
 ul {
 	padding: 0;
+}
+
+.spacer {
+	height: 20rem;
+}
+
+@media (width < 768px) {
+	html {
+		font-size: 62.5%;
+	}
+	.ignore-on-mobile {
+		display: none;
+	}
 }
