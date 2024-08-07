@@ -4,10 +4,12 @@
 	--yellow-1: #fcefb4;
 	--yellow-2: #fae588;
 	--yellow-3: #f9dc5c;
-	--yellow-4: #1d1b14;
+	--yellow-4: #211f18;
+	--yellow-5: #1d1b14;
 }
 
 body {
+	background-color: var(--main-bg-color);
 	background: linear-gradient(180deg, var(--yellow-4) 0%, var(--main-bg-color) 100%);
 	width: 100vw;
 }
@@ -112,7 +114,7 @@ ul {
 }
 
 .spacer {
-	height: 20rem;
+	height: 25vh;
 }
 
 @media (width < 768px) {
