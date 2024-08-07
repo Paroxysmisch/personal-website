@@ -120,7 +120,12 @@ ul {
 	html {
 		font-size: 62.5%;
 	}
+
 	.ignore-on-mobile {
 		display: none;
+	}
+
+	.hero {
+		top: -14rem;
 	}
 }
