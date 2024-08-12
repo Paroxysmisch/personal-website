@@ -8,6 +8,8 @@
 	--yellow-5: #1d1b14;
 	--card-header: #292822;
 	--card-body: #1f1e1a;
+	--yellow-0-trans-0: #fdf8e115;
+	--yellow-0-trans-1: #fdf8e199;
 }
 
 body {
@@ -31,6 +33,7 @@ body {
 	color: var(--yellow-0);
 	position: sticky;
 	top: 1.5rem;
+	z-index: 10;
 }
 
 .navbar a {
@@ -126,20 +129,6 @@ ul {
 	height: 25vh;
 }
 
-@media (width < 768px) {
-	html {
-		font-size: 62.5%;
-	}
-
-	.ignore-on-mobile {
-		display: none;
-	}
-
-	.hero {
-		top: -14rem;
-	}
-}
-
 .card {
 	overflow: hidden;
 	margin-top: 0.5rem;
@@ -165,6 +154,9 @@ ul {
 	justify-content: space-between;
 	padding: 2rem;
 	align-items: center;
+	border-radius: inherit;
+	border-bottom-left-radius: 1rem;
+	border-bottom-right-radius: 1rem;
 }
 
 .card-header-title {
@@ -188,6 +180,10 @@ ul {
 	padding: 2rem;
 	display: flex;
 	justify-content: space-between;
+	border-radius: inherit;
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+	font-family: "IBM Plex Mono", monospace;
 }
 
 .work-logo {
@@ -195,6 +191,82 @@ ul {
 	height: 4rem;
 }
 
+.card-base {
+	position: relative;
+	height: max-content;
+	overflow: clip;
+	padding: 0.05rem;
+	border-radius: 1rem;
+	margin-top: 0.5rem;
+	margin-bottom: 0.5rem;
+}
+
+.card-content {
+	background-color: var(--card-body);
+	position: relative;
+	z-index: 2;
+	border-radius: inherit;
+	margin: 0.05rem;
+}
+
+.card-round-top {
+	border-style: hidden;
+	border-top-left-radius: 2.5rem;
+	border-top-right-radius: 2.5rem;
+}
+
+.card-round-bottom {
+	border-style: hidden;
+	border-bottom-left-radius: 2.5rem;
+	border-bottom-right-radius: 2.5rem;
+}
+
+.card-base:before {
+	content: "";
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	background: radial-gradient(
+		64rem circle at var(--mouse-x) var(--mouse-y), 
+		var(--yellow-0-trans-1),
+		transparent 20%
+	);
+	z-index: 1;
+}
+
+.card-content:hover:before {
+	content: "";
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	transition: opacity 500ms;
+	background: radial-gradient(
+		48rem circle at var(--mouse-x) var(--mouse-y),
+		var(--yellow-0-trans-0),
+		transparent 30%
+	);
+	z-index: 3;
+	border-radius: inherit;
+}
+
 p {
 	font-size: 1.17rem;
+}
+
+@media (width < 768px) {
+	html {
+		font-size: 62.5%;
+	}
+
+	.ignore-on-mobile {
+		display: none;
+	}
+
+	.hero {
+		top: -14rem;
+	}
+
+	.card-body {
+		display: block;
+	}
 }
