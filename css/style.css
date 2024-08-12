@@ -129,24 +129,6 @@ ul {
 	height: 25vh;
 }
 
-.card {
-	overflow: hidden;
-	margin-top: 0.5rem;
-	margin-bottom: 0.5rem;
-	border-style: hidden;
-	border-radius: 1rem;
-	transition: all 0.25s ease-out;
-	box-shadow: 0 0 0px 0px #fdf8e10f;
-	font-family: "IBM Plex Mono", monospace;
-	font-weight: 400;
-
-}
-
-.card:hover {
-	box-shadow: 0 0 80px 10px #fdf8e10f;
-	/* x offset, y offset, blur size, spread size, color */
-}
-
 .card-header {
 	background-color: var(--card-header);
 	display: flex;
