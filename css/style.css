@@ -175,9 +175,7 @@ ul {
 
 .card-base {
 	position: relative;
-	height: max-content;
-	overflow: clip;
-	padding: 0.05rem;
+	overflow: hidden;
 	border-radius: 1rem;
 	margin-top: 0.5rem;
 	margin-bottom: 0.5rem;
@@ -188,7 +186,7 @@ ul {
 	position: relative;
 	z-index: 2;
 	border-radius: inherit;
-	margin: 0.05rem;
+	margin: 0.1rem;
 }
 
 .card-round-top {
