@@ -153,8 +153,9 @@ ul {
 
 .card-body-content {
 	color: var(--yellow-0);
-	text-align: justify;
-	text-justify: inter-word;
+	padding: 2rem;
+	padding-top: 0;
+	font-family: "IBM Plex Mono", monospace;
 }
 
 .card-body {
@@ -227,10 +228,21 @@ ul {
 	);
 	z-index: 3;
 	border-radius: inherit;
+	pointer-events: none;
 }
 
 p {
 	font-size: 1.17rem;
+}
+
+a:link {
+	color: var(--yellow-1);
+	text-decoration: bold, underline;
+}
+
+a:visited {
+	color: var(--yellow-1);
+	text-decoration: bold, underline;
 }
 
 @media (width < 768px) {
